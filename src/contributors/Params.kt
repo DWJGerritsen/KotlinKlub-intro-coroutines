@@ -9,8 +9,8 @@ data class Params(val username: String, val password: String, val org: String, v
 fun loadStoredParams(): Params {
     return prefNode().run {
         Params(
-            get("username", ""),
-            get("password", ""),
+            get("username", "coroutines-demo"),
+            get("password", "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"),
             get("org", "kotlin"),
             Variant.valueOf(get("variant", Variant.BLOCKING.name))
         )
